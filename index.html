@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tatacoa Verde</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body> 
+        <section id="home">  
+                <!-- barra de navegación --> 
+            <header class="navbar">
+                <div class="logo">
+                    <img src="assets/img/logo.png" alt="Tatacoa Verde">
+                </div>
+                <nav class="nav-links">
+                    <a href="#" class="nav-item active">
+                        <i class="fa-solid fa-house"></i>
+                        Inicio
+                    </a>
+
+                    <a href="#" class="nav-item">
+                        <i class="fa-regular fa-star"></i>
+                        Opiniones
+                    </a>
+
+                        <a href="#" class="btn">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        Acceder
+                    </a>
+                </nav>
+                </header>
+                <!-- imagen principal del desierto de la tatacoa -->
+                <section class="hero">
+                    <div class="hero-content">
+                        <h1>Descubre el Desierto de la Tatacoa</h1>
+                        <p>Vive una aventura única en el segundo desierto más grande de Colombia</p>
+
+                        <div class="hero-icons">
+                            <i class="fa-solid fa-sun"></i>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <i class="fa-solid fa-calendar"></i>
+                        </div>
+                    </div>
+                </section>
+                <section class="search-box">
+
+                    <!-- Busqueda de destinos -->
+                    <div class="search-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Buscar destinos o paquetes turísticos...">
+                    </div>
+
+                    <!-- Filtros -->
+                    <div class="filters">
+
+                        <div class="filter">
+                            <label><i class="fa-solid fa-dollar-sign"></i> Rango de Precio</label>
+                            <select>
+                                <option>Todos los precios</option>
+                            </select>
+                        </div>
+
+                        <div class="filter">
+                            <label><i class="fa-solid fa-location-dot"></i> Destino</label>
+                            <select>
+                                <option>Todos los destinos</option>
+                            </select>
+                        </div>
+
+                        <div class="filter">
+                            <label><i class="fa-solid fa-users"></i> Personas</label>
+                            <select>
+                                <option>Cualquier grupo</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </section>
+                <!-- destinos -->
+                <section class="cards-section">
+
+                    <div class="cards">
+
+                        <!-- CARD 1 -->
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/img/foto 1.png" alt="">
+                                <span class="price">$250K</span>
+                                <div class="duration"><i class="fa-regular fa-calendar"></i> 2 días</div>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="title green">Atardecer en el Desierto</h3>
+                                <p>Explora esta joya arquitectónica iluminada en un ambiente mágico</p>
+
+                                <div class="card-info">
+                                    <span><i class="fa-solid fa-location-dot"></i> Zipaquirá</span>
+                                    <span><i class="fa-solid fa-users"></i> 2-6</span>
+                                </div>
+
+                                <a href="#" class="btn-detalles">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/img/foto 2.png" alt="">
+                                <span class="price">$180K</span>
+                                <div class="duration"><i class="fa-regular fa-calendar"></i> 1 día</div>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="title orange">Aventura en Río Salvaje</h3>
+                                <p>Disfruta de rápidos y naturaleza en una experiencia llena de adrenalina</p>
+
+                                <div class="card-info">
+                                    <span><i class="fa-solid fa-location-dot"></i> Caño Cristales</span>
+                                    <span><i class="fa-solid fa-users"></i> 1-4</span>
+                                </div>
+
+                               <a href="#" class="btn-detalles">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3 -->
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/img/foto 3.png" alt="">
+                                <span class="price">$150K</span>
+                                <div class="duration"><i class="fa-regular fa-calendar"></i> Medio día</div>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="title green">Catedral de Sal - Experiencia Nocturna</h3>
+                                <p>Contempla un espectáculo natural con colores únicos del cielo</p>
+
+                                <div class="card-info">
+                                    <span><i class="fa-solid fa-location-dot"></i> Tatacoa</span>
+                                    <span><i class="fa-solid fa-users"></i> 2-8</span>
+                                </div>
+
+                               <a href="#" class="btn-detalles">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- sección de detalle (se muestra al hacer clic en "Ver Detalles") -->
+                <section id="detalle" class="cards-section hidden">
+                    <div class="cards">
+                        <div class="card" id="detalle-card">
+                            <div class="card-img">
+                                <img id="detalle-main-img" src="" alt="">
+                                <span class="price" id="detalle-precio"></span>
+                                <div class="duration"><i class="fa-regular fa-calendar"></i> <span id="detalle-duracion"></span></div>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="title green" id="detalle-titulo"></h3>
+                                <p id="detalle-descripcion"></p>
+
+                                <div class="card-info">
+                                    <span><i class="fa-solid fa-location-dot"></i> <span id="detalle-ubicacion"></span></span>
+                                    <span><i class="fa-solid fa-users"></i> <span id="detalle-personas"></span></span>
+                                </div>
+
+                                <div id="detalle-thumbs"></div>
+
+                                <a href="#" class="btn-detalles">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+    <script src="js/scrips.js"></script>
+
+                <!-- informacion de la empresa -->
+            <footer class="footer">
+                <div class="footer-container">
+
+                    <!-- LOGO + DESCRIPCIÓN -->
+                    <div class="footer-col">
+                        <img src="assets/img/logo.png" alt="logo" class="footer-logo">
+                        <p>Tu agencia de turismo de confianza para explorar los destinos más hermosos de Colombia.</p>
+                    </div>
+
+                    <!-- CONTACTO -->
+                    <div class="footer-col">
+                        <h3>Contacto</h3>
+                        <p>Email: tatacoaverde@gmail.com</p>
+                        <p>Teléfono: 321 304 6405</p>
+                        <p>WhatsApp: +57 321 304 6405</p>
+                    </div>
+
+                    <!-- INFORMACIÓN -->
+                    <div class="footer-col">
+                        <h3>Información Legal</h3>
+                        <p>RNT: 97262</p>
+                        <p>NIT: 94945407-4</p>
+                        <p>Términos y Condiciones</p>
+                        <p>Políticas de Privacidad</p>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                    © 2026 Tatacoa Verde. Todos los derechos reservados.
+                </div>
+
+            </footer>
+        </section>
+
+
+     </body>
+
+</html>

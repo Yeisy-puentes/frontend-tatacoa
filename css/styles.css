@@ -1,0 +1,415 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f3ef;
+}
+/* barra superior */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 50px;
+    background-color: #f3f2ef;
+    border-bottom: 1px solid #e0e0e0;
+}
+/* LOGO */
+.logo img {
+    height: 55px;
+}
+
+/* CONTENEDOR LINKS */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* ITEMS GENERALES */
+.nav-item {
+    text-decoration: none;
+    color: #6b5b53;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+/* ICONOS */
+.nav-links i {
+    font-size: 14px;
+}
+
+/* ICONO Opiniones */
+.nav-item i {
+    color: #8d6e63;
+}
+
+/* BOTÓN (Inicio) */
+.nav-item.active {
+    background-color: #2e7d32;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 12px;
+}
+
+/* ICONO inicio */
+.nav-item.active i {
+    color: white;
+}
+
+/* BOTÓN ACCEDER */
+.btn {
+    text-decoration: none;
+    background-color: #43a047;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+/* ICONO ACCEDER */
+.btn i {
+    color: white;
+}
+.nav-item:hover {
+    opacity: 0.8;
+}
+
+.btn:hover {
+    background-color: #388e3c;
+}
+
+/* imagen principal*/
+.hero {
+    margin: 50px auto 70px auto;  
+    width: 70%;                  
+    height: 420px;
+    border-radius: 24px;         
+    overflow: hidden;
+    position: relative;
+
+    background-image: url("../assets/img/fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 12%;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* CAPA DEGRADADA (EFECTO)*/
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(46, 125, 50, 0.75),
+        rgba(255, 152, 0, 0.65),
+        rgba(0, 0, 0, 0.3)
+    );
+}
+
+
+/* CONTENIDO HERO*/
+.hero-content {
+    position: relative;
+    color: white;
+    padding: 60px;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.hero-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-icons i {
+    font-size: 22px;
+    color: #ffb74d;
+}
+
+/* Busqueda de destinos */
+.search-box {
+    width: 67%;
+    margin: -30px auto 40px auto;  
+    background-color: #f5f4f2;
+    padding: 25px;
+    border-radius: 16px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+/* INPUT PRINCIPAL*/
+.search-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-input i {
+    color: #2e7d32;
+    font-size: 18px;
+}
+
+.search-input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    background: transparent;
+}
+
+
+/* FILTROS (contenedor)*/
+.filters {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* CADA FILTRO*/
+.filter {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* LABEL */
+.filter label {
+    font-size: 14px;
+    color: #2e7d32;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* SELECT */
+.filter select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f8f6;
+    font-size: 14px;
+    color: #6b5b53;
+    outline: none;
+}
+
+/* destinos  */
+.cards-section {
+    background-color: #f8f7f5; 
+    padding: 40px 0;
+}
+
+
+/* CONTENEDOR CARDS*/
+.cards {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    gap: 25px;
+}
+
+
+/* CARD */
+.card {
+    flex: 1;
+    background: #f5f4f2;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+/*IMAGEN */
+.card-img {
+    position: relative;
+}
+
+.card-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* PRECIO */
+.price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff9800;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* DURACIÓN */
+.duration {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: white;
+    font-size: 14px;
+}
+
+/*CONTENIDO*/
+.card-body {
+    padding: 20px;
+}
+
+.title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.title.green {
+    color: #2e7d32;
+}
+
+.title.orange {
+    color: #f57c00;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #6b5b53;
+    margin-bottom: 15px;
+}
+
+
+/* INFO */
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #6b5b53;
+    margin-bottom: 15px;
+}
+
+
+/* BOTÓN */
+.btn-detalles {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #2e7d32, #43a047);
+    color: white;
+    font-weight: 600;
+
+}
+
+.card button:hover {
+    opacity: 0.9;
+}
+
+   /*informacion de empresa */
+ 
+   .footer {
+    background-color: #f0ede7; /* 👈 más claro, combina con tu web */
+    margin-top: 60px;
+    padding: 40px 0 20px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+
+/* CONTENEDOR */
+.footer-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+/* COLUMNAS */
+.footer-col {
+    flex: 1;
+}
+
+.footer-col h3 {
+    margin-bottom: 15px;
+    color: #2e7d32; /* verde principal */
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: #6b5b53;
+    margin-bottom: 8px;
+}
+
+
+/* LOGO */
+.footer-logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+
+/* PARTE INFERIOR */
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #6b5b53;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+/* utilidad para ocultar secciones sin usar inline styles */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive: mobile primero */
+@media (max-width: 767px) {
+    .navbar { padding: 10px 16px; }
+    .logo img { height: 48px; }
+    .nav-links { gap: 12px; }
+    .hero { width: 95%; height: 320px; margin: 30px auto; border-radius: 16px; }
+    .hero-content { padding: 28px; max-width: 100%; }
+    .hero-content h1 { font-size: 28px; }
+    .search-box { width: 92%; margin: -20px auto 24px auto; padding: 18px; }
+    .cards { width: 92%; flex-direction: column; gap: 18px; }
+    .card-img img { height: 160px; }
+    .footer-container { width: 92%; flex-direction: column; gap: 20px; }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero { width: 90%; height: 360px; }
+    .search-box { width: 85%; }
+    .cards { width: 85%; }
+}
+
+
