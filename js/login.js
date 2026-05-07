@@ -38,39 +38,20 @@ form.addEventListener("submit", (e) => {
         return;
     }
 
-    /* CREDENCIALES DE PRUEBA */
+    /*
+     * DEMO / MOCK
+     * No se validan credenciales reales en el frontend.
+     * La autenticación real debe hacerse en backend.
+     */
+    mostrarMensaje(
+        "Acceso de demostración: autenticación simulada",
+        "success"
+    );
 
-    const usuarioCorrecto = "admin@tatacoa.com";
-    const passwordCorrecta = "admin123";
-    const usuarioCorrecto2 = "superadmin@tatacoa.com";
-    const passwordCorrecta2 = "superadmin123";
-    const usuarioCorrecto3 = "guia@tatacoa.com";
-    const passwordCorrecta3 = "guia123";
-
-    /* VALIDACION */
-    if(
-        correo === usuarioCorrecto &&
-        clave === passwordCorrecta
-    ){
-
-        mostrarMensaje(
-            "Inicio de sesión exitoso",
-            "success"
-        );
-
-        /* REDIRECCION */
-        setTimeout(() => {
-            window.location.href = "index.html";
-        }, 1800);
-
-    }else{
-
-        mostrarMensaje(
-            "Correo o contraseña incorrectos",
-            "error"
-        );
-
-    }
+    /* REDIRECCION */
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 1800);
 
 });
 
