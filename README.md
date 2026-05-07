@@ -24,17 +24,17 @@ Notas sobre consistencia
 Cómo probar localmente
 
 1. Abrir `index.html` en el navegador (doble clic o usar un servidor estático).
-	 - Recomendado (HTTP): usar un servidor simple como `python -m http.server 8000` desde la raíz del proyecto y abrir `http://localhost:8000`.
+   - Recomendado (HTTP): usar un servidor simple como `python -m http.server 8000` desde la raíz del proyecto y abrir `http://localhost:8000`.
 2. Navegar a `login.html` para probar el formulario de inicio de sesión.
 
 Preparado para GitHub (sólo archivos necesarios)
 - Ya existe un archivo `.gitignore` con entradas comunes (`.DS_Store`, `node_modules/`, `.vscode/`, `dist/`, `.env`).
 - Archivos esenciales:
-	- `index.html`, `login.html`
-	- `css/` (styles.css, login.css)
-	- `js/` (scripts.js, login.js)
-	- `assets/img/` (imágenes usadas)
-	- `.gitignore`, `README.md`
+  - `index.html`, `login.html`
+  - `css/` (styles.css, login.css)
+  - `js/` (scripts.js, login.js)
+  - `assets/img/` (imágenes usadas)
+  - `.gitignore`, `README.md`
 
 Siguientes pasos opcionales
 - Las imágenes `foto 1.png`, `foto 2.png`, `foto 3.png` fueron renombradas a `foto1.png`, `foto2.png`, `foto3.png` respectivamente para eliminar espacios en los nombres.
