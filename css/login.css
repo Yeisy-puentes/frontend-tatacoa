@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f2e9;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.hero{
+    margin: 50px auto 70px auto;
+    width: 70%;
+    height: 620px;
+
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+
+    background: white;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* LADO IZQUIERDO */
+.hero-left{
+    width: 50%;
+    height: 100%;
+
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(51, 138, 46, 0.65),
+            rgba(255, 153, 0, 0.45)
+        ),
+        url("../assets/img/fondo.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 12%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LOGO */
+.logo-box{
+    width: 270px;
+    height: 195px;
+
+    background: rgba(255,255,255,0.95);
+
+    border-radius: 28px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 45px;
+}
+
+.logo-box img{
+    width: 210px;
+    object-fit: contain;
+}
+
+/* TEXTO IZQUIERDO */
+.hero-info{
+    color: white;
+    text-align: center;
+}
+
+.hero-info h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.hero-info ul{
+    list-style: none;
+}
+
+.hero-info li{
+    margin-bottom: 20px;
+    font-size: 1.45rem;
+}
+
+/* LADO DERECHO */
+.hero-right{
+    width: 50%;
+    background: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-content{
+    width: 78%;
+}
+
+/* TITULOS */
+.login-content h2{
+    font-size: 3rem;
+    color: #2f7f35;
+    margin-bottom: 12px;
+}
+
+.login-content p{
+    color: #8b6b5e;
+    font-size: 1.2rem;
+    margin-bottom: 45px;
+}
+
+/* INPUTS */
+.input-group{
+    margin-bottom: 28px;
+}
+
+.input-group label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #2f7f35;
+    font-weight: 600;
+
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.input-group input{
+    width: 100%;
+    height: 60px;
+
+    border: 1px solid #e7e1dc;
+    border-radius: 18px;
+
+    padding: 0 18px;
+
+    font-size: 1rem;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.input-group input:focus{
+    border-color: #3d9d41;
+}
+
+/* PASSWORD */
+.password-box{
+    position: relative;
+}
+
+.password-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: #9b7f72;
+    cursor: pointer;
+}
+
+/* BOTON */
+button{
+    width: 100%;
+    height: 62px;
+
+    border: none;
+    border-radius: 18px;
+
+    background: linear-gradient(to right, #2e8c35, #4caf50);
+
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+/* RESPONSIVE */
+@media(max-width: 1200px){
+
+    .hero{
+        width: 90%;
+    }
+
+    .hero-info h1{
+        font-size: 2.3rem;
+    }
+}
+
+@media(max-width: 900px){
+
+    .hero{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-left,
+    .hero-right{
+        width: 100%;
+    }
+
+    .hero-left{
+        padding: 60px 20px;
+    }
+
+    .hero-right{
+        padding: 60px 0;
+    }
+
+    .login-content{
+        width: 85%;
+    }
+
+    .hero-info h1{
+        font-size: 2rem;
+    }
+
+    .hero-info li{
+        font-size: 1.1rem;
+    }
+
+    .login-content h2{
+        font-size: 2.2rem;
+    }
+}
+/* ALERTAS */
+.alerta{
+    width: 100%;
+
+    padding: 16px 18px;
+    margin-bottom: 22px;
+
+    border-radius: 14px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    animation: aparecer 0.3s ease;
+}
+
+.alerta.success{
+    background: #e5f7e7;
+    color: #238636;
+    border: 1px solid #9ad7a0;
+}
+
+.alerta.error{
+    background: #ffe7e7;
+    color: #c62828;
+    border: 1px solid #f1a4a4;
+}
+
+/* ANIMACION */
+@keyframes aparecer{
+
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
