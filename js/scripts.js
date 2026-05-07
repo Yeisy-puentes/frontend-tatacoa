@@ -3,7 +3,7 @@
         {
             nombre: "Atardecer en el Desierto",
             precio: "$250K",
-            imagen: "assets/img/foto 1.png",
+            imagen: "assets/img/foto1.png",
             descripcion: "Explora esta joya arquitectónica iluminada en un ambiente mágico",
             ubicacion: "Zipaquirá",
             personas: "2-6",
@@ -12,7 +12,7 @@
         {
             nombre: "Aventura en Río Salvaje",
             precio: "$180K",
-            imagen: "assets/img/foto 2.png",
+            imagen: "assets/img/foto2.png",
             descripcion: "Disfruta de rápidos y naturaleza en una experiencia llena de adrenalina",
             ubicacion: "Caño Cristales",
             personas: "1-4",
@@ -21,7 +21,7 @@
         {
             nombre: "Catedral de Sal - Experiencia Nocturna",
             precio: "$150K",
-            imagen: "assets/img/foto 3.png",
+            imagen: "assets/img/foto3.png",
             descripcion: "Contempla un espectáculo natural con colores únicos del cielo",
             ubicacion: "Tatacoa",
             personas: "2-8",
