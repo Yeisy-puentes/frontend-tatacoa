@@ -359,32 +359,47 @@
         }
     }
 
+    function escapeHTML(value) {
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#39;")
+            .replace(/`/g, "&#96;");
+    }
+
     function renderReviewCard(review) {
         const likeData = state.likes[review.id] || { count: review.utiles, liked: false };
         const iconClass = likeData.liked ? "fa-solid fa-heart" : "fa-regular fa-heart";
         const likeCount = likeData.count;
+        const safeNombre = escapeHTML(review.nombre);
+        const safeInitials = escapeHTML(getInitials(review.nombre));
+        const safeExperiencia = escapeHTML(review.experiencia);
+        const safeFecha = escapeHTML(review.fecha);
+        const safeComentario = escapeHTML(review.comentario);
 
         return `
             <article class="review-item-card" data-review-id="${review.id}">
                 <div class="review-item-header">
                     <div class="review-user">
-                        <div class="review-avatar ${review.colorAvatar}">${getInitials(review.nombre)}</div>
+                        <div class="review-avatar ${review.colorAvatar}">${safeInitials}</div>
                         <div class="review-user-copy">
                             <div class="review-user-line">
-                                <h4 class="review-user-name">${review.nombre}</h4>
+                                <h4 class="review-user-name">${safeNombre}</h4>
                                 ${review.verificado ? '<span class="review-badge"><i class="fa-solid fa-circle-check"></i> Verificado</span>' : ""}
                             </div>
-                            <p class="review-experience">${review.experiencia}</p>
+                            <p class="review-experience">${safeExperiencia}</p>
                         </div>
                     </div>
-                    <div class="review-date">${review.fecha}</div>
+                    <div class="review-date">${safeFecha}</div>
                 </div>
 
                 <div class="review-item-stars">
                     ${createStars(review.calificacion)}
                 </div>
 
-                <p class="review-comment">${review.comentario}</p>
+                <p class="review-comment">${safeComentario}</p>
 
                 <div class="review-item-footer">
                     <button class="review-like-btn ${likeData.liked ? "liked" : ""}" data-review-id="${review.id}" type="button">
