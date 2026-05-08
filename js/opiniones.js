@@ -378,6 +378,8 @@
         const safeExperiencia = escapeHTML(review.experiencia);
         const safeFecha = escapeHTML(review.fecha);
         const safeComentario = escapeHTML(review.comentario);
+        const likeActionLabel = likeData.liked ? "Quitar marca de útil" : "Marcar como útil";
+        const likeAriaLabel = `${likeActionLabel}. ${likeCount} personas la encontraron útil`;
 
         return `
             <article class="review-item-card" data-review-id="${review.id}">
@@ -402,8 +404,8 @@
                 <p class="review-comment">${safeComentario}</p>
 
                 <div class="review-item-footer">
-                    <button class="review-like-btn ${likeData.liked ? "liked" : ""}" data-review-id="${review.id}" type="button">
-                        <i class="${iconClass}"></i>
+                    <button class="review-like-btn ${likeData.liked ? "liked" : ""}" data-review-id="${review.id}" type="button" aria-pressed="${likeData.liked}" aria-label="${likeAriaLabel}">
+                        <i class="${iconClass}" aria-hidden="true"></i>
                         <span class="like-count">${likeCount} personas la encontraron útil</span>
                     </button>
                     <div class="review-item-score">
