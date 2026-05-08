@@ -1,44 +1,56 @@
-# Tatacoa Verde
+﻿# Tatacoa Verde
 
-Este repositorio contiene un sitio estático sencillo de presentación turística llamado "Tatacoa Verde".
+Este repositorio contiene un sitio web estático para la agencia turística "Tatacoa Verde".
 
-Resumen de cambios realizados
-- Actualicé la referencia a Font Awesome para usar la misma versión en todas las páginas (6.5.1).
-- Renombré el archivo JavaScript principal de `js/scrips.js` a `js/scripts.js` (corrigiendo un typo) y actualicé la referencia en `index.html`.
-- Eliminé un duplicado innecesario de la imagen de fondo ubicado en `css/assets/img/fondo.png`.
-- Revisé y verifiqué las rutas relativas de CSS/JS/imagenes; las rutas apuntan a `assets/img/...`, `css/...` y `js/...`.
+## Estructura del proyecto
+- `index.html` — página principal con paquetes turísticos.
+- `opiniones.html` — página de opiniones con filtros y valoraciones.
+- `login.html` — formulario de acceso de demostración.
+- `css/styles.css` — estilos generales del sitio.
+- `css/login.css` — estilos de la página de login.
+- `js/scripts.js` — lógica interactiva de los detalles de paquete.
+- `js/opiniones.js` — lógica de opiniones, filtros y me gusta.
+- `js/login.js` — control de acceso simulado y visibilidad de contraseña.
+- `assets/img/` — recursos gráficos usados en el sitio.
 
-Estructura importante
-- `index.html` — página principal (sitio público)
-- `login.html` — página de acceso al panel
-- `css/styles.css`, `css/login.css` — estilos
-- `js/scripts.js` — lógica de interactividad para la vista de detalles
-- `js/login.js` — lógica del formulario de login
-- `assets/img/` — imágenes usadas por el sitio
+## Verificación realizada
+- Las rutas relativas de CSS, JS e imágenes están correctamente configuradas.
+- `index.html` carga `css/styles.css`, Font Awesome `6.5.1` y `js/scripts.js`.
+- `opiniones.html` carga `css/styles.css`, Font Awesome `6.5.1` y `js/opiniones.js` con `defer`.
+- `login.html` carga `css/login.css`, Font Awesome `6.5.1` y `js/login.js`.
+- `css/styles.css` y `css/login.css` usan `url("../assets/img/fondo.png")` desde la carpeta correcta.
+- Las imágenes referenciadas existen en `assets/img/`.
+- No se detectaron errores de validación en HTML, CSS o JavaScript.
 
-Notas sobre consistencia
-- Todas las referencias a Font Awesome usan la versión `6.5.1`.
-- Las rutas en los CSS usan `url("../assets/img/...")` siendo `css/` la carpeta padre correcta.
-- Las referencias a los archivos JS están en `js/` y ahora `index.html` carga `js/scripts.js`.
+## Cómo probar localmente
+1. Abrir la carpeta del proyecto en un navegador.
+2. Usar un servidor local desde la raíz del proyecto:
+   ```bash
+   python -m http.server 8000
+   ```
+3. Abrir `http://localhost:8000`.
+4. Probar `index.html`, `opiniones.html` y `login.html`.
 
-Cómo probar localmente
+## Listado de archivos clave
+- `index.html`
+- `opiniones.html`
+- `login.html`
+- `css/styles.css`
+- `css/login.css`
+- `js/scripts.js`
+- `js/opiniones.js`
+- `js/login.js`
+- `assets/img/logo.png`
+- `assets/img/fondo.png`
+- `assets/img/foto1.png`
+- `assets/img/foto2.png`
+- `assets/img/foto3.png`
 
-1. Abrir `index.html` en el navegador (doble clic o usar un servidor estático).
-   - Recomendado (HTTP): usar un servidor simple como `python -m http.server 8000` desde la raíz del proyecto y abrir `http://localhost:8000`.
-2. Navegar a `login.html` para probar el formulario de inicio de sesión.
+## Preparado para GitHub
+- El proyecto ya tiene un `.gitignore`.
+- El contenido está listo para subir como un sitio estático.
 
-Preparado para GitHub (sólo archivos necesarios)
-- Ya existe un archivo `.gitignore` con entradas comunes (`.DS_Store`, `node_modules/`, `.vscode/`, `dist/`, `.env`).
-- Archivos esenciales:
-  - `index.html`, `login.html`
-  - `css/` (styles.css, login.css)
-  - `js/` (scripts.js, login.js)
-  - `assets/img/` (imágenes usadas)
-  - `.gitignore`, `README.md`
-
-Siguientes pasos opcionales
-- Las imágenes `foto 1.png`, `foto 2.png`, `foto 3.png` fueron renombradas a `foto1.png`, `foto2.png`, `foto3.png` respectivamente para eliminar espacios en los nombres.
-- Añadir un `index.html` mínimo para producción o un pequeño script de build si se desea automatizar (no incluido por defecto).
-
-Contacto
-- Si quieres que haga los cambios extra (renombrar imágenes, añadir acciones de GitHub, o crear un README más detallado), dime y lo implemento.
+## Notas
+- El formulario de `login.html` es de demostración y no valida credenciales reales.
+- La página `opiniones.html` utiliza `localStorage` para guardar reseñas y reacciones.
+- El botón "Ver Detalles" en `index.html` muestra un panel dinámico de contenido.
