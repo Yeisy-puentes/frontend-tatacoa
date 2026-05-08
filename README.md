@@ -23,13 +23,12 @@ Este repositorio contiene un sitio web estático para la agencia turística "Tat
 - Se verificó la carga de recursos y la estructura general del proyecto; la validación completa de HTML, CSS y JavaScript queda sujeta al estado actual de cada archivo.
 
 ## Cómo probar localmente
-1. Abrir la carpeta del proyecto en un navegador.
-2. Usar un servidor local desde la raíz del proyecto:
+1. Abrir `index.html` directamente en el navegador, o bien usar un servidor local desde la raíz del proyecto:
    ```bash
    python -m http.server 8000
    ```
-3. Abrir `http://localhost:8000`.
-4. Probar `index.html`, `opiniones.html` y `login.html`.
+2. Abrir `http://localhost:8000/index.html`.
+3. Probar `index.html`, `opiniones.html` y `login.html`.
 
 ## Listado de archivos clave
 - `index.html`
