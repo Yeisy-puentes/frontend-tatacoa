@@ -1,4 +1,4 @@
-﻿# Tatacoa Verde
+# Tatacoa Verde
 
 Este repositorio contiene un sitio web estático para la agencia turística "Tatacoa Verde".
 
