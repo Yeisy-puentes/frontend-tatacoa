@@ -442,7 +442,7 @@
         const name = nameInput ? nameInput.value.trim() : "";
         const comment = commentField ? commentField.value.trim() : "";
 
-        if (!name || !comment || state.formRating === 0) {
+        if (!name || !comment || comment.length < 10 || state.formRating === 0) {
             return;
         }
 
