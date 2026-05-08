@@ -20,7 +20,7 @@ Este repositorio contiene un sitio web estático para la agencia turística "Tat
 - `login.html` carga `css/login.css`, Font Awesome `6.5.1` y `js/login.js`.
 - `css/styles.css` y `css/login.css` usan `url("../assets/img/fondo.png")` desde la carpeta correcta.
 - Las imágenes referenciadas existen en `assets/img/`.
-- No se detectaron errores de validación en HTML, CSS o JavaScript.
+- Se verificó la carga de recursos y la estructura general del proyecto; la validación completa de HTML, CSS y JavaScript queda sujeta al estado actual de cada archivo.
 
 ## Cómo probar localmente
 1. Abrir la carpeta del proyecto en un navegador.
